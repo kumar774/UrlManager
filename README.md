@@ -1,2 +1,28 @@
-# UrlManager
-Manage Url online
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Redirect Timer Example</title>
+</head>
+<body>
+   <p>Redirecting to the URL in <span id="countdown">10</span> seconds...</p>
+   
+   <script>
+      // Set the number of seconds for the countdown timer
+      var seconds = 10;
+      
+      // Get the countdown element from the DOM
+      var countdownElement = document.getElementById("countdown");
+      
+      // Start the countdown timer
+      var countdown = setInterval(function() {
+         seconds--;
+         countdownElement.innerHTML = seconds.toString();
+         if (seconds == 0) {
+            clearInterval(countdown);
+            window.location = "https://vplink.in";
+         }
+      }, 1000);
+   </script>
+</body>
+</html>
